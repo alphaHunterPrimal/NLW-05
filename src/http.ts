@@ -14,6 +14,9 @@ app.set("view engine", "html")
 app.get('/pages/client', (req, res) => {
     return res.render('html/client.html');
   });
+  app.get('/pages/admin', (req, res) => {
+    return res.render('html/admin.html');
+  });
 
 const http = createServer(app); // criando protocolo http
 const io = new Server(http) // utilizando o http para criar o protocolo websocket
